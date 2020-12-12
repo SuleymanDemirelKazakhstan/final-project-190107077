@@ -1,9 +1,9 @@
 body {
-	position: static;
 	background: rgba(5, 5, 5, 0.83);
 	width: auto;
 	height: 900px;
 	align-items: center;
+  align-items: center;
 }
 
 header nav a {
@@ -16,7 +16,6 @@ header nav a {
 	font-size: 21px;
 	font-weight: lighter;
 	line-height: 29px;
-
 }
 
 header .logo {
@@ -53,6 +52,7 @@ img {
 	font-size: 50px;
 	line-height: 59px;
 	color: #FFFFFF;
+
 }
 
 .mainpage h2 {
@@ -69,7 +69,6 @@ img {
 	height: 78px;
 	font-family: Montserrat;
 	font-size: 18px;
-	line-height: 22px;
 	background: linear-gradient(180deg, #EC8882 0%, #EE6ECA 100%);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 36px;
@@ -77,8 +76,10 @@ img {
 
 .mainpage {
 	display: flex;
-	position: absolute;
 	left: 200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagemp {
@@ -99,117 +100,47 @@ img {
 .btn :hover{
 	background: #EC8882;
 }
-    .buy_now img {
-      width: 280px;
-      height: 320px;
-    }
 
-    .b {
-      background-color: #c21571;
-      border: none;
-      width: 150px;
-      height: 30px;
-      color: white;
-      font-weight: bold;
-    }
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
 
-    .sale {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.images{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
-    .buy_now a img{
-      position: absolute;
-      width: 75px;
-      height: 75px;
-      right: 10px;
-      top:0;
-    }
-    .but_now p {
-      font-weight: bold;
-    }
+#about p {
+  font-size: 30px;
+  font-family: Montserrat;
+  color: white;
+}
 
-    .buy_now {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 320px;
-      height: 400px;
-      border: solid 3px red; 
-      background-color: white;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-
-    div .sales {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-      width: 100%;
-      background-image: url("https://i.pinimg.com/236x/9e/82/f6/9e82f6acdf04f056c4ffc36cfd7aac36.jpg");
-    }
-
-    .lable {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .lable p {
-      display: flex;
-      width: 500px;
-      font-size: 72px;
-    }
+hr {
+  margin-top: 50px;
+}
 
 
-      div .cards {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-      }
+.img_a:hover .img{
+  transform: (-10px, -10px, 0);
+} 
 
-      div.card{
-        display: flex;
-        flex-direction: column;
-        border: 1.5px solid black;
-        border-radius: 5px;
-        text-align: center;
-        align-items: center;
-        margin: 5px;
-        padding-right: 8px;
-        padding-left: 8px;
-      
-      }
+.img_a:hover .img img{
+  opacity:0.5;
+}
 
-      .card button {
-        background-color: #c21571;
-        border: none;
-        width: 100px;
-        height: 30px;
-        color: white;
-        font-weight: bold;
-      }
+.img{
+  background-color: linear-gradient(red, yellow);
+  transition: transform .1s linear;
+}
+ .img img{
+  display: block;
+ }
 
-      .card img {
-        width: 200px;
-        height: 210px;
-      }
 
-      div.price{
-        background-color: white;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      .card a{
-        color: black;
-        text-decoration: none;
-        font-size: 14px;
-      }
