@@ -1,0 +1,52 @@
+<header>
+			<img src="logo.png" class="logo">
+		<nav>
+			<a href="#">Главная</a>
+			<a href="#cos">Косметика</a>
+			<a href="#clo">Одежда</a>
+			<a href="#about">О нас</a>
+		</nav>
+			<input type="text" placeholder="Search">
+			<button type="submit" class="btn"><i class="fa fa-search"></i></button>
+			<img src="korzina.svg" width="40" height="40">
+	</header>
+  <form method="POST" action="/filter">
+  <select id="select" name="brand">
+  <option value="option">Опции</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="dress">dress</option>
+  <option value="jeans">jeans</option>
+  </select>
+  <button id="submit">Применить</button>
+  </form>
+	<div class="sales">
+  {{#each clothes}}
+    <div class="buy_now">
+        <img src="{{img}}"/>
+        <a href="#"><img width = "30px" height="30px" class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1H6WHYVxjIQNjzyWEmUVGykIclD0mGq5HCQ&usqp=CAU"/></a>
+        <button class ="b">BUY NOW</button>
+        <p class="sale">{{price}} KZT</p>
+    </div>
+    {{/each}}
+</div>
+<footer>
+		<div class="medias">
+      <div class="media">
+        <img src="ins.png" width="45" height="40">
+        <p>@true.beauty</p>
+      </div>
+      <div class="media">
+        <img src="face.png" width="42" height="40">
+        <p>TRUE BEAUTY</p>
+      </div>
+      <div class="media">
+        <img src="gmail.png" width="40" height="32">
+        <p>true.beauty@gmail.com</p>
+      </div>
+    </div>
+    <div class="a">
+      <p>Адрес: г. Атырау</p>
+      <p>Контакты: 8(7122) XX-XX-XX</p>
+    </div>
+	</footer>

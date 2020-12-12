@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+			<img src="logo.png" class="logo">
+		<nav>
+			<a href="#">Главная</a>
+			<a href="#cos">Косметика</a>
+			<a href="/clothes">Одежда</a>
+			<a href="#about">О нас</a>
+		</nav>
+			<input type="text" placeholder="Search">
+			<button type="submit" class="btn"><i class="fa fa-search"></i></button>
+			<a href="auth/login">
+			<img src="korzina.svg" width="40" height="40" ></a>
+	</header>
+	<div class="mainpage">
+		<div class="text mp">
+			<h1>
+				Будь прекрасной вместе с нами
+			</h1>
+			<h2>
+				Онлайн-магазин косметики и одежды  для девушек предоставит тебе лучший сервис с бесплатной доставкой на дом
+			</h2>
+			<button>
+				Присоединяйся к нам
+			</button>
+		</div>
+		<div class="imagemp">
+			<img src="4.jpg">
+		</div>
+	</div>
+	<hr>
+	<div id="about">
+		<p>История о нас</p>
+		<p>Мы продаем товары для вашей красоты</p>
+		<div class="images">
+			<div class="img_a">
+				<div class="img">
+					<img src="skin.png" width="300" height="270">
+				</div>
+			</div>
+			<div class="img_a">
+				<div class="img">
+					<img src="clo.png" width="300" height="270">
+				</div>
+			</div>
+			<div class="img_a">
+				<div class="img">
+					<img src="box.png" width="300" height="270">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="medias">
+      <div class="media">
+        <img src="ins.png" width="45" height="40">
+        <p>@true.beauty</p>
+      </div>
+      <div class="media">
+        <img src="face.png" width="42" height="40">
+        <p>TRUE BEAUTY</p>
+      </div>
+      <div class="media">
+        <img src="gmail.png" width="40" height="32">
+        <p>true.beauty@gmail.com</p>
+      </div>
+    </div>
+    <div class="a">
+      <p>Адрес: г. Атырау</p>
+      <p>Контакты: 8(7122) XX-XX-XX</p>
+    </div>
+	</footer>
+</body>
+<style type="text/css">
+	body {
+	background: rgba(5, 5, 5, 0.83);
+	width: auto;
+	height: 900px;
+	align-items: center;
+  align-items: center;
+}
+
+header nav a {
+	width: 105px;
+	height: 23px;
+	font-family: 'Montserrat';
+	text-decoration: none;
+	color: white;
+	margin-left: 40px;
+	font-size: 21px;
+	font-weight: lighter;
+	line-height: 29px;
+}
+
+header .logo {
+	 filter: contrast(30%) brightness(150%);
+}
+
+header {
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+
+nav {
+
+	margin-right: 60px;
+}
+
+nav a:hover{
+	text-decoration-line: underline;
+}
+
+img {
+
+	margin-right: 150px;
+	margin-left: 40px;
+}
+
+.mainpage h1 {
+	width: 470px;
+	height: 128px;
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 59px;
+	color: #FFFFFF;
+
+}
+
+.mainpage h2 {
+	width: 656px;
+	height: 111px;
+	font-family: Montserrat;
+	font-size: 24px;
+	line-height: 29px;
+	color: #FFFFFF;
+}
+
+.mainpage button {
+	width: 288px;
+	height: 78px;
+	font-family: Montserrat;
+	font-size: 18px;
+	background: linear-gradient(180deg, #EC8882 0%, #EE6ECA 100%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 36px;
+}
+
+.mainpage {
+	display: flex;
+	left: 200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagemp {
+	display: flex;
+}
+
+.imagemp img {
+	background: url(1.jpg);
+	border: 1px solid rgba(235, 86, 157, 0.65);
+	box-sizing: border-box;
+	filter: drop-shadow(6px 4px 12px rgba(0, 0, 0, 0.25));
+	border-radius: 140px;
+	width: 350px;
+}
+.btn {
+	 cursor: pointer;
+}
+.btn :hover{
+	background: #EC8882;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.images{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#about p {
+  font-size: 30px;
+  font-family: Montserrat;
+  color: white;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+
+.img_a:hover .img{
+  transform: (-10px, -10px, 0);
+} 
+
+.img_a:hover .img img{
+  opacity:0.5;
+}
+
+.img{
+  background-color: linear-gradient(red, yellow);
+  transition: transform .1s linear;
+}
+ .img img{
+  display: block;
+ }
+
+.media {
+    display: flex;
+  margin-right: 200px;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.media p {
+    font-size: 20px;
+    font-family: "Montserrat";
+    margin-left: 5px;
+}
+
+.a p {
+  font-family: "Montserrat";
+}
+
+.a {
+  margin-right: 60px;
+}
+
+footer {
+  background-color: white;
+  display: flex;
+}
+
+</style>
+</html>
