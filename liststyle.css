@@ -108,7 +108,7 @@ footer {
 
     .sales {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
       flex-wrap: wrap;
       margin-bottom: 40px;
@@ -124,7 +124,7 @@ select {
   background-color: #f1f1f1;
 }
 
-form button {
+button {
  	width: 150px;
 	height: 30px;
 	font-family: Montserrat;

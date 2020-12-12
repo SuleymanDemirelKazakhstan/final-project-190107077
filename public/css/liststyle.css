@@ -37,7 +37,7 @@ nav a:hover{
 	text-decoration-line: underline;
 }
 .media {
-    display: flex;
+  display: flex;
   margin-right: 200px;
   margin-left: 40px;
   align-items: center;
@@ -49,13 +49,6 @@ nav a:hover{
     margin-left: 5px;
 }
 
-.a p {
-  font-family: "Montserrat";
-}
-
-.a {
-  margin-right: 60px;
-}
 
 footer {
   background-color: white;
@@ -63,16 +56,20 @@ footer {
 }
 .buy_now img {
       width: 280px;
-      height: 320px;
+      height: 300px;
     }
 
-    .b {
+    .buy_now .a {
       background-color: #c21571;
+      text-decoration: none;
       border: none;
       width: 150px;
       height: 30px;
       color: white;
       font-weight: bold;
+      display: flex;
+      justify-content: center;
+      font-family: 'Montserrat'
     }
 
     .sale {
@@ -81,13 +78,6 @@ footer {
       font-weight: bold;
     }
 
-    .buy_now a img{
-      position: absolute;
-      width: 75px;
-      height: 75px;
-      right: 10px;
-      top:0;
-    }
     .but_now p {
       font-weight: bold;
     }

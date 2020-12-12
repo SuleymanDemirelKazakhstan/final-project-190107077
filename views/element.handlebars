@@ -8,34 +8,27 @@
 		</nav>
 			<input type="text" placeholder="Search">
 			<button type="submit" class="btn"><i class="fa fa-search"></i></button>
-			<a href="auth/login"><img src="korzina.svg" width="40" height="40">
+			<a href="auth/login">
+			<img src="korzina.svg" width="40" height="40" ></a>
 	</header>
-  <form method="POST" action="/filterbybrand">
-  <select id="select" name="brand">
-  <option value="option">Брэнды</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  </select>
-  <button id="submit">Применить</button>
-  </form>
-  <form method="POST" action="/filterbytype">
-  <select id="select" name="type">
-  <option value="option">Вещи</option>
-  <option value="dress">dress</option>
-  <option value="jeans">jeans</option>
-  </select>
-  <button id="submit">Применить</button>
-  </form>
-	<div class="sales">
-  {{#each clothes}}
-    <div class="buy_now">
-        <img src="{{img}}"/>
-        <a class="a" href="/{{_id}}" class="button">Посмотреть</a>
-        <p class="sale">{{price}} KZT</p>
-    </div>
-    {{/each}}
-</div>
-<footer>
+	{{#each element}}
+	<div class="element">
+		<img src="{{img}}">
+		<div class="description">
+			<p>Цена: {{price}}KZT</p>
+			<p>Наименование: {{type}}</p>
+			<p>Здесь должно быть красивое описание</p>	
+		</div>
+	</div>
+		<div class="choose">
+		<button>В корзину</button>
+		<div>
+			<i id="icon"class="fas fa-heart" style="font-size:36px;color:white;"></i>
+			<a href="">В избранное</a>
+		</div>
+	</div>
+	{{/each}}
+	<footer>
 		<div class="medias">
       <div class="media">
         <img src="ins.png" width="45" height="40">

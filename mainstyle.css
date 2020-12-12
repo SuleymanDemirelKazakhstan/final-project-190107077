@@ -3,6 +3,7 @@ body {
 	width: auto;
 	height: 900px;
 	align-items: center;
+  align-items: center;
 }
 
 header nav a {
@@ -143,7 +144,7 @@ hr {
  }
 
 .media {
-  display: flex;
+    display: flex;
   margin-right: 200px;
   margin-left: 40px;
   align-items: center;
@@ -166,10 +167,4 @@ hr {
 footer {
   background-color: white;
   display: flex;
-}
-
-.choose {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
