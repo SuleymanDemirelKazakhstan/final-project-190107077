@@ -3,7 +3,8 @@ body {
 	width: auto;
 	height: 900px;
 	align-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 header nav a {
 	width: 105px;
@@ -53,14 +54,15 @@ nav a:hover{
 footer {
   background-color: white;
   display: flex;
+  width: 100%;
 }
 .buy_now img {
       width: 280px;
       height: 300px;
-    }
+}
 
-    .buy_now .a {
-      background-color: #c21571;
+.buy_now a {
+    background-color: #c21571;
       text-decoration: none;
       border: none;
       width: 150px;
@@ -98,10 +100,9 @@ footer {
 
     .sales {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
       flex-wrap: wrap;
       margin-bottom: 40px;
       width: 100%;
-      background-image: url("https://i.pinimg.com/236x/9e/82/f6/9e82f6acdf04f056c4ffc36cfd7aac36.jpg");
     }

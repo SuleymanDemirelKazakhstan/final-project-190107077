@@ -6,20 +6,24 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0">
 </head>
 <body>
 	<header>
 			<img src="logo.png" class="logo">
 		<nav>
 			<a href="/mainpage.html">Главная</a>
-			<a href="#cos">Косметика</a>
+			<a href="/cos">Косметика</a>
 			<a href="/clothes">Одежда</a>
 			<a href="mainpage.html#about">О нас</a>
 		</nav>
-			<input type="text" placeholder="Search">
-			<button type="submit" class="btn"><i class="fa fa-search"></i></button>
-			<a href="auth/login">
+		<form method="POST" action="/search">
+				<input type="text" placeholder="Search" name="name">
+				<button type="submit" class="btn"><i class="fa fa-search"></i></button>
+		</form>
+			<a href="/admin">
 			<img src="korzina.svg" width="40" height="40" ></a>
+			
 	</header>
 	<div class="mainpage">
 		<div class="text mp">
@@ -29,9 +33,7 @@
 			<h2>
 				Онлайн-магазин косметики и одежды  для девушек предоставит тебе лучший сервис с бесплатной доставкой на дом
 			</h2>
-			<button>
-				Присоединяйся к нам
-			</button>
+			<a href="/login/auth" class="button">Присоединиться</a>
 		</div>
 		<div class="imagemp">
 			<img src="4.jpg">
@@ -59,6 +61,10 @@
 			</div>
 		</div>
 	</div>
+	<div class="div">
+		<button id="order">Скоро на сайте</button>
+	</div>
+	<div id="sales"></div>
 	<footer>
 		<div class="medias">
       <div class="media">
@@ -86,7 +92,6 @@
 	width: auto;
 	height: 900px;
 	align-items: center;
-  align-items: center;
 }
 
 header nav a {
@@ -97,7 +102,6 @@ header nav a {
 	color: white;
 	margin-left: 40px;
 	font-size: 21px;
-	font-weight: lighter;
 	line-height: 29px;
 }
 
@@ -147,14 +151,16 @@ img {
 	color: #FFFFFF;
 }
 
-.mainpage button {
+.mainpage .button {
 	width: 288px;
 	height: 78px;
 	font-family: Montserrat;
-	font-size: 18px;
+	font-size: 50px;
 	background: linear-gradient(180deg, #EC8882 0%, #EE6ECA 100%);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 36px;
+	border-radius: 16px;
+	text-decoration: none;
+	color: black;
 }
 
 .mainpage {
@@ -172,7 +178,6 @@ img {
 .imagemp img {
 	background: url(1.jpg);
 	border: 1px solid rgba(235, 86, 157, 0.65);
-	box-sizing: border-box;
 	filter: drop-shadow(6px 4px 12px rgba(0, 0, 0, 0.25));
 	border-radius: 140px;
 	width: 350px;
@@ -195,8 +200,10 @@ img {
 
 .images{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
+  flex-wrap: wrap;
+
 }
 
 #about p {
@@ -227,10 +234,11 @@ hr {
  }
 
 .media {
-    display: flex;
+  display: flex;
   margin-right: 200px;
   margin-left: 40px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .media p {
@@ -252,5 +260,178 @@ footer {
   display: flex;
 }
 
+    .buy_now .a {
+      background-color: #c21571;
+      text-decoration: none;
+      border: none;
+      width: 150px;
+      height: 30px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      font-family: 'Montserrat'
+    }
+
+    .sale {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+
+    .buy_now {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 320px;
+      height: 400px;
+      border: solid 3px red; 
+      background-color: white;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    #sales {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    #order {
+    width: 288px;
+	height: 78px;
+	font-family: Montserrat;
+	font-size: 18px;
+	background: linear-gradient(180deg, #EC8882 0%, #EE6ECA 100%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 16px;
+	text-decoration: none;
+	color: black;
+    }
+
+    .div {
+    	display: flex;
+    	justify-content: center;
+    }
+
+   @media screen and (max-width: 1400px) {
+  	.mainpage {
+  		display: none;
+  	}
+  	header nav a {
+	font-family: 'Montserrat';
+	text-decoration: none;
+	color: white;
+	font-size: 21px;
+}
+
+.logo {
+	display: none;
+  }
+
+  .mainpage img{
+  	display: flex;
+  	flex-direction: column;
+  }
+
+
+}
+
+@media screen and (max-width: 900px) {
+  	.mainpage {
+  		display: none;
+  	}
+  	header nav a {
+	font-family: 'Montserrat';
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+}
+
+
+
+.logo {
+	display: none;
+  }
+
+  nav {
+
+	margin-right: 5px;
+}
+
+}
+
 </style>
+<script type="text/javascript">
+	let load = document.querySelector("#order");
+	let c = document.querySelector("#sales");
+
+	let object;
+
+function onProcessText(text){
+  object = JSON.parse(text); //get array from web server
+  console.log(object);
+  print();
+}
+
+function print(){  
+  //check
+  //c.innerHTML = object[0].company;
+  //change style
+  for(let i = 0; i < object.length; i++) {
+
+    let buy_now = document.createElement("div");
+    let price = document.createElement("p");
+    let brand = document.createElement("p");
+    let desc = document.createElement("p");
+
+    buy_now.setAttribute("class", "buy_now");
+    c.appendChild(buy_now);
+
+    //adding data to title
+    price.setAttribute("class", "sale");
+    price.innerHTML=object[i].brand;
+    buy_now.appendChild(price);
+
+    brand.setAttribute("class", "sale");
+    brand.innerHTML=object[i].price;
+    buy_now.appendChild(brand);
+
+    desc.setAttribute("class", "sale");
+    desc.innerHTML=JSON.stringify(object[i]);
+    c.appendChild(desc);
+
+  }
+
+  console.log(object);
+
+  load.innerHTML = "Загружено";
+}
+
+function onSuccess(response){
+  console.log(response.status);
+  response.text().then(onProcessText);
+}
+
+function onError(){
+  c.innerHTML="";
+  load.innerHTML="Some error occured";
+}
+
+load.addEventListener("click", onClickFn);
+
+function onClickFn(event){
+
+	this.disabled = 'disabled';
+  load.innerHTML = "Загрузка..."
+  fetch("https://run.mocky.io/v3/c868d0ef-b8a2-446a-91b4-e00867132029").then(onSuccess,onError);
+
+}
+</script>
 </html>

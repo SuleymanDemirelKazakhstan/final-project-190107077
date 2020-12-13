@@ -106,3 +106,8 @@ footer {
 	color: white; 
 	border: 1px solid #FFFFFF;
 }
+@media screen and (max-width: 1000px) {
+  .logo {
+    display: none;
+  }
+}

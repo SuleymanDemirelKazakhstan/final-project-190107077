@@ -1,43 +1,49 @@
 body {
-	background: rgba(5, 5, 5, 0.83);
-	width: auto;
-	height: 900px;
-	align-items: center;
+  background: rgba(5, 5, 5, 0.83);
+  width: auto;
+  height: 900px;
   align-items: center;
 }
+
 header nav a {
-	width: 105px;
-	height: 23px;
-	font-family: 'Montserrat';
-	text-decoration: none;
-	color: white;
-	margin-left: 40px;
-	font-size: 21px;
-	font-weight: lighter;
-	line-height: 29px;
+  width: 105px;
+  height: 23px;
+  font-family: 'Montserrat';
+  text-decoration: none;
+  color: white;
+  margin-left: 40px;
+  font-size: 21px;
+  font-weight: lighter;
+  line-height: 29px;
 }
 
 header .logo {
-	 filter: contrast(30%) brightness(150%);
+   filter: contrast(30%) brightness(150%);
 }
 
 header {
-	display: flex;
-	align-items:center;
-	justify-content: center;
-	margin-bottom: 100px;
+  display: flex;
+  margin-bottom: 100px;
 }
 
 nav {
 
-	margin-right: 60px;
+  margin-right: 60px;
 }
 
 nav a:hover{
-	text-decoration-line: underline;
+  text-decoration-line: underline;
 }
+
+img {
+
+  margin-right: 150px;
+  margin-left: 40px;
+}
+
+
 .media {
-    display: flex;
+  display: flex;
   margin-right: 200px;
   margin-left: 40px;
   align-items: center;
@@ -96,7 +102,6 @@ footer {
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       width: 320px;
       height: 400px;

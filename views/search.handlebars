@@ -1,0 +1,44 @@
+<header>
+			<img src="logo.png" class="logo">
+		<nav>
+			<a href="/mainpage.html">Главная</a>
+			<a href="/cos">Косметика</a>
+			<a href="/clothes">Одежда</a>
+			<a href="mainpage.html#about">О нас</a>
+		</nav>
+			<form method="POST" action="/search">
+				<input type="text" placeholder="Search" name="name">
+				<button type="submit" class="btn"><i class="fa fa-search"></i></button>
+		</form>
+			<a href="/admin">
+			<img src="korzina.svg" width="40" height="40" ></a>
+	</header>
+	<div class="sales">
+  {{#each search}}
+    <div class="buy_now">
+        <img src="{{img}}"/>
+        <a class="a" href="/{{_id}}" class="button">Посмотреть</a>
+        <p class="sale">{{type}} by "{{brand}}" {{price}} KZT</p>
+    </div>
+    {{/each}}
+</div>
+	<footer>
+		<div class="medias">
+      <div class="media">
+        <img src="ins.png" width="45" height="40">
+        <p>@true.beauty</p>
+      </div>
+      <div class="media">
+        <img src="face.png" width="42" height="40">
+        <p>TRUE BEAUTY</p>
+      </div>
+      <div class="media">
+        <img src="gmail.png" width="40" height="32">
+        <p>true.beauty@gmail.com</p>
+      </div>
+    </div>
+    <div class="a">
+      <p>Адрес: г. Атырау</p>
+      <p>Контакты: 8(7122) XX-XX-XX</p>
+    </div>
+	</footer>

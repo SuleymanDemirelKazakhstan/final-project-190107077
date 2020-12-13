@@ -32,7 +32,10 @@
 	</div>
 	<div class="choose">
 		<button>В корзину</button>
-		<i id="icon"class="fas fa-heart" style="font-size:36px;color:white;"></i>
+		<div>
+			<i id="icon"class="fas fa-heart" style="font-size:36px;color:white;"></i>
+			<a href="">В избранно</a>
+		</div>
 	</div>
 	<footer>
 		<div class="medias">
@@ -56,10 +59,3 @@
 	</footer>
 </body>
 </html>
-<script type="text/javascript">
-	var i = document.querySelector("#icon");
-	console.log(i);
-	i.onClick = function(){
-		i.style.color = "red";
-	}
-</script>
